@@ -1,14 +1,3 @@
-
-
-
-
-
-ATM withdrawal simulation 
-Name: kowsalya B 
-Department : CCE- I 
-
-
-
 balance = 5000  
 
 print("🏧 Welcome to ABC Bank ATM")
@@ -22,16 +11,16 @@ amount = int(input("Enter the withdrawal amount: "))
 
 
 if amount <= 0:
-   
-     print("❌ Invalid amount. Enter a positive number.")
+ 
+ print("❌ Invalid amount. Enter a positive number.")
 
 elif amount > balance:
     
-    print("❌ Insufficient balance! Please check your balance and try again.")
+     print("❌ Insufficient balance! Please check your balance and try again.")
 
 elif amount % 100 != 0:
-    
-    print("❌ ATM can dispense only multiples of  100.")
+      
+      print("❌ ATM can dispense only multiples of  100.")
 
 else:
     balance -= amount
