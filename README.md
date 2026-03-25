@@ -1,29 +1,32 @@
 
 
-print("🏧 Welcome to ATM Withdrawal System")
 
-# Initial balance in account
-balance = 5000  
+    # ATM Withdrawal Simulation
 
-while True:
-    print("\nYour Current Balance: ₹", balance)
+balance = 5000  # Initial account balance
 
-    amount = int(input("Enter amount to withdraw: "))
+print("🏧 Welcome to ABC Bank ATM")
+print("----------------------------")
+print("Your current balance is:", balance)
 
-    if amount <= 0:
-        print("❌ Invalid amount. Please enter a valid number.")
+# Ask user how much they want to withdraw
+amount = int(input("Enter the withdrawal amount: "))
 
-    elif amount > balance:
-        print("❌ Insufficient balance!")
+# Check conditions
+if amount <= 0:
+    print("❌ Invalid amount. Enter a positive number.")
 
-    else:
-        balance -= amount
-        print("\n✅ Withdrawal Successful!")
-        print("Amount Withdrawn: ₹", amount)
-        print("Remaining Balance: ₹", balance)
+elif amount > balance:
+    print("❌ Insufficient balance! Please check your balance and try again.")
 
-    choice = input("\nDo you want to withdraw again? (yes/no): ").lower()
+elif amount % 100 != 0:
+    print("❌ ATM can dispense only multiples of 100.")
 
-    if choice != "yes":
-        print("\n Thank you for using the ATM!")
-        break
+else:
+    balance -= amount
+    print("✅ Withdrawal Successful!")
+    print("💵 Amount Withdrawn:", amount)
+    print("💰 Remaining Balance:", balance)
+
+print("----------------------------")
+print("Thank you for using ABC Bank ATM 😊")
