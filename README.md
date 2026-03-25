@@ -1,22 +1,29 @@
-# GitHub Setup Activity
 
-This repository is created as part of the GitHub Setup Activity.  
-It includes the basic components needed to understand how GitHub works.
 
-## 📌 What This Repository Includes
-- README file (project introduction)
-- Sample uploaded file
-- Basic GitHub setup demonstration
+print("🏧 Welcome to ATM Withdrawal System")
 
-## 🎯 Purpose of This Repository
-- To learn how to create and manage a GitHub repository  
-- To understand version control concepts  
-- To become comfortable with uploading files and organizing a project
+# Initial balance in account
+balance = 5000  
 
-## 👤 Author
-**Kowsalya B**  
-Department & Year: **CCE, I Year**  
-GitHub Profile: https://github.com/kowsalyakowsii2007-cmyk
+while True:
+    print("\nYour Current Balance: ₹", balance)
 
-## ✔ Status
-This repository is successfully created and ready for submission.
+    amount = int(input("Enter amount to withdraw: "))
+
+    if amount <= 0:
+        print("❌ Invalid amount. Please enter a valid number.")
+
+    elif amount > balance:
+        print("❌ Insufficient balance!")
+
+    else:
+        balance -= amount
+        print("\n✅ Withdrawal Successful!")
+        print("Amount Withdrawn: ₹", amount)
+        print("Remaining Balance: ₹", balance)
+
+    choice = input("\nDo you want to withdraw again? (yes/no): ").lower()
+
+    if choice != "yes":
+        print("\n Thank you for using the ATM!")
+        break
