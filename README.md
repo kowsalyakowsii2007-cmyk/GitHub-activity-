@@ -3,28 +3,18 @@
 
 
 
+ATM withdrawal simulation 
+Name: kowsalya B 
+Department : CCE- I 
 
 
-
-
-
-
-
-
-
-#ATM withdrawal simulation
- 
-#Name: kowsalya B 
-
-#Department: CCE- I year
-
-
-    
 
 balance = 5000  
 
 print("🏧 Welcome to ABC Bank ATM")
+
 print("----------------------------")
+
 print("Your current balance is:", balance)
 
 
@@ -45,9 +35,13 @@ elif amount % 100 != 0:
 
 else:
     balance -= amount
+
     print("✅ Withdrawal Successful!")
+
     print("💵 Amount Withdrawn:", amount)
+
     print("💰 Remaining Balance:", balance)
 
 print("----------------------------")
+
 print("Thank you for using ABC Bank ATM 😊")
