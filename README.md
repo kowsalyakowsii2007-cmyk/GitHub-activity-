@@ -30,12 +30,15 @@ amount = int(input("Enter the withdrawal amount: "))
 
 
 if amount <= 0:
-    print("❌ Invalid amount. Enter a positive number.")
+   
+     print("❌ Invalid amount. Enter a positive number.")
 
 elif amount > balance:
+    
     print("❌ Insufficient balance! Please check your balance and try again.")
 
 elif amount % 100 != 0:
+    
     print("❌ ATM can dispense only multiples of  100.")
 
 else:
